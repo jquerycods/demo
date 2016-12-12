@@ -1,0 +1,34 @@
+﻿<html lang="en"><head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.loader-mask{position:fixed;top:0;left:0;right:0;bottom:0;background-color:#eee;z-index:99999}
+.load-container{position:absolute;width:70px;height:70px;top:50%;left:50%;margin:-35px 0 0 -35px}
+.loader-cycle{width:70px;height:70px;position:absolute;top:0;right:0;bottom:0;left:0;z-index:105;display:block;margin:auto;-webkit-transition:opacity .25s linear;transition:opacity .25s linear}
+.loader-cycle:before{border:1px solid rgba(0,0,0,.1)}
+.loader-cycle:before,.loader-cycle:after{width:100%;height:100%;position:absolute;top:0;right:0;bottom:0;left:0;border-radius:110%;content:'';display:block}
+.loader-cycle:after{-webkit-animation:.loader-cycl-spin .75s linear infinite;animation:loader-cycle-spin .75s linear infinite;border:3px solid transparent;border-top-color:#e6c55d}
+.loader-cycle:before,.loader-cycle:after{width:100%;height:100%;position:absolute;top:0;right:0;bottom:0;left:0;border-radius:110%;content:'';display:block}
+@-webkit-keyframes loader-cycle-spin{from{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}
+@keyframes loader-cycle-spin{from{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}
+.cube{position:absolute;width:50px;height:50px;animation:rotate 1.5s infinite ease-out;z-index:99999}
+.cube:before{content:"";position:absolute;height:14px;width:50px;transform:skewX(60deg);top:-14px;left:-12px}
+.cube:after{content:"";position:absolute;width:25px;height:50px;transform:skewY(30deg);top:-7px;right:100%}
+.purple{background-color:#D47BF9}
+.purple:before{background-color:#8E44AD}
+.purple:after{background-color:#4C1C60}
+.orange{animation-delay:-0.75s;background-color:#FF8432}
+.orange:before{background-color:#FF7519!important}
+.orange:after{background-color:#863600!important}
+@keyframes rotate{25%{transform:translate(50px,0px)}50%{transform:translate(50px,50px)}74%{z-index:2}75%{transform:translate(0px,50px);z-index:4}}
+</style>
+</head>
+<body>
+<div class='loader-mask'>
+<div class='load-container'>
+<span class='loader-cycle'></span>
+</div>
+</div>
+</body>
+</html>
